@@ -1,0 +1,37 @@
+name: Node CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    name: 🛠 BUILD
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node
+      uses: actions/setup-node@v2.1.5
+      with:
+        node-version: '16.x'
+
+    - name: Install npm@7
+      run: npm i -g npm@7
+
+    - name: Build and test
+      run: |
+        npm ci
+        npm audit --production
+        npm run build
+
+    - name: Deploy to static branch
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
+        commit_message: ${{ github.event.head_commit.message }}
+        enable_jekyll: false

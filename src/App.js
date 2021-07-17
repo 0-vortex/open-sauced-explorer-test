@@ -135,6 +135,12 @@ class App extends Component {
     return false;
   }
 
+  handleEditQuery = (query) => this.setState({ query });
+
+  handleToggleExplorer = () => {
+    this.setState({ explorerIsOpen: !this.state.explorerIsOpen });
+  };
+
   render() {
     const { query, schema, explorerIsOpen } = this.state;
 

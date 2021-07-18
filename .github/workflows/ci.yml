@@ -29,7 +29,6 @@ jobs:
     - name: Build and test
       run: |
         npm ci
-#        npm audit --production
         npm run build
 
     - name: Deploy to static branch

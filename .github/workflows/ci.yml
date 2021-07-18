@@ -20,6 +20,9 @@ jobs:
         NODE_VERSION: 16.3.0
         NODE_DISTRO: linux-x64
 
+    - name: Check configuration
+      run: npm config ls
+
     - name: Install npm@7
       run: npm i -g npm@7
 

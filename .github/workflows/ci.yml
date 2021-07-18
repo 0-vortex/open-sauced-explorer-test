@@ -26,11 +26,14 @@ jobs:
     - name: Install npm@7
       run: npm i -g npm@7
 
-    - name: Build and test
-      run: |
-        npm ci
-        npm audit --production
-        npm run build
+    - name: Install clean dependencies
+      run: npm ci
+
+    - name: Audit production
+      run: npm audit --production
+
+    - name: Build static React app
+      run: npm run build
 
     - name: Deploy to static branch
       uses: peaceiris/actions-gh-pages@v3

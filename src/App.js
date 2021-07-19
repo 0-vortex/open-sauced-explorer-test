@@ -9,26 +9,7 @@ import 'graphiql/graphiql.css';
 import './App.css';
 
 import ColorSchemeToggle from './ColorSchemeToggle';
-
-const fetcher = (params) => fetch(
-  'https://serve.onegraph.com/dynamic?app_id=bc178799-292e-49df-8016-223abf5a07cb',
-  {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(params),
-  },
-)
-  .then((response) => response.text())
-  .then((responseBody) => {
-    try {
-      return JSON.parse(responseBody);
-    } catch (e) {
-      return responseBody;
-    }
-  });
+import Config from "./config";
 
 const DEFAULT_QUERY = `# shift-option/alt-click on a query below to jump to it in the explorer
 # option/alt-click on a field in the explorer to select all subfields
@@ -51,11 +32,16 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.graphiql = null;
-    this.state = { schema: null, query: DEFAULT_QUERY, explorerIsOpen: true };
+    this.state = {
+      schema: null,
+      query: DEFAULT_QUERY,
+      explorerIsOpen: true,
+      isLoggedIn: false,
+    };
   }
 
   componentDidMount() {
-    fetcher({
+    Config.fetchOneGraph({
       query: getIntrospectionQuery(),
     }).then((result) => {
       const editor = this.graphiql.getQueryEditor();
@@ -66,6 +52,8 @@ class App extends Component {
 
       this.setState({ schema: buildClientSchema(result.data) });
     });
+
+    Config.auth.isLoggedIn('github').then((isLoggedIn) => this.setState({isLoggedIn}))
   }
 
   handleInspectOperation(
@@ -141,8 +129,38 @@ class App extends Component {
     this.setState({ explorerIsOpen: !this.state.explorerIsOpen });
   };
 
+  handleLogin = () => {
+    const { isLoggedIn } = this.state;
+
+    console.log(isLoggedIn);
+    if (isLoggedIn) {
+      Config.auth.logout('github').then((response) => {
+        if (response.result === 'success') {
+          console.log('Logout succeeded');
+          this.setState({ isLoggedIn: false });
+        } else {
+          console.log('Logout failed');
+        }
+      });
+    } else {
+      Config.auth
+          .login('github')
+          .then(() => {
+            Config.auth.isLoggedIn('github').then((isLoggedIn) => {
+              if (isLoggedIn) {
+                console.log('Successfully logged in to GitHub');
+                this.setState({ isLoggedIn: true });
+              } else {
+                console.log('Did not grant auth for GitHub');
+              }
+            });
+          })
+          .catch((e) => console.error('Problem logging in', e));
+    }
+  }
+
   render() {
-    const { query, schema, explorerIsOpen } = this.state;
+    const { query, schema, explorerIsOpen, isLoggedIn } = this.state;
 
     return (
       <div className="graphiql-container">
@@ -158,7 +176,7 @@ class App extends Component {
         />
         <GraphiQL
           ref={(ref) => { this.graphiql = ref; }}
-          fetcher={fetcher}
+          fetcher={Config.fetchOneGraph}
           schema={schema}
           query={query}
           onEditQuery={this.handleEditQuery}
@@ -181,6 +199,11 @@ class App extends Component {
               title="Toggle Explorer"
             />
             <ColorSchemeToggle />
+            <GraphiQL.Button
+                onClick={this.handleLogin}
+                label={`Log ${isLoggedIn ? 'out of' : 'in to'} GitHub`}
+                title="GitHub"
+            />
           </GraphiQL.Toolbar>
         </GraphiQL>
       </div>

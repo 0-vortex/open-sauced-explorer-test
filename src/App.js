@@ -1,31 +1,64 @@
 import React, { Component } from 'react';
 import GraphiQL from 'graphiql';
 import GraphiQLExplorer from 'graphiql-explorer';
-import { buildClientSchema, getIntrospectionQuery, parse } from 'graphql';
+import {buildClientSchema, getIntrospectionQuery, parse} from 'graphql';
 
 import { makeDefaultArg, getDefaultScalarArgValue } from './CustomArgs';
+import ColorSchemeToggle from './ColorSchemeToggle';
+import Config from "./config";
 
 import 'graphiql/graphiql.css';
 import './App.css';
 
-import ColorSchemeToggle from './ColorSchemeToggle';
-import Config from "./config";
-
 const DEFAULT_QUERY = `# shift-option/alt-click on a query below to jump to it in the explorer
 # option/alt-click on a field in the explorer to select all subfields
-query npmPackage {
-  npm {
-    package(name: "onegraph-apollo-client") {
-      name
-      homepage
-      downloads {
-        lastMonth {
-          count
+
+  query IssuesBeforeQuery($owner: String!, $repo: String!, $cursor: String) {
+    gitHub {
+      repositoryOwner(login: $owner) {
+        repository(name: $repo) {
+          issues(first: 5, states: OPEN, orderBy: {field: CREATED_AT, direction: DESC}, before: $cursor) {
+            totalCount
+            data: edges {
+              cursor
+              node {
+                id
+                title
+                url
+                state
+                author {
+                  login
+                }
+                labels(first: 5) {
+                  data: edges {
+                    node {
+                      id
+                      name
+                      color
+                    }
+                  }
+                }
+                comments {
+                  totalCount
+                }
+                milestone {
+                  title
+                }
+                participants(first: 3) {
+                  totalCount
+                  nodes {
+                    login
+                    avatarUrl
+                  }
+                }
+                createdAt
+              }
+            }
+          }
         }
       }
     }
   }
-}
 `;
 
 class App extends Component {
@@ -132,7 +165,6 @@ class App extends Component {
   handleLogin = () => {
     const { isLoggedIn } = this.state;
 
-    console.log(isLoggedIn);
     if (isLoggedIn) {
       Config.auth.logout('github').then((response) => {
         if (response.result === 'success') {
@@ -180,7 +212,6 @@ class App extends Component {
           schema={schema}
           query={query}
           onEditQuery={this.handleEditQuery}
-          editorTheme="dracula"
         >
           <GraphiQL.Toolbar>
             <GraphiQL.Button

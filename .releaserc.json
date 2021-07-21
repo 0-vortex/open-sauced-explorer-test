@@ -5,7 +5,8 @@
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
     ["@semantic-release/npm", {
-      "npmPublish": false
+      "npmPublish": false,
+      "tarballDir": "build"
     }],
     ["@semantic-release/git", {
       "assets": [
@@ -17,7 +18,7 @@
     }],
     ["@semantic-release/github", {
       "assets": [
-        "build"
+        "build/*.tgz"
       ]
     }]
   ]

@@ -13,53 +13,52 @@ import './App.css';
 const DEFAULT_QUERY = `# shift-option/alt-click on a query below to jump to it in the explorer
 # option/alt-click on a field in the explorer to select all subfields
 
-  query IssuesBeforeQuery($owner: String!, $repo: String!, $cursor: String) {
-    gitHub {
-      repositoryOwner(login: $owner) {
-        repository(name: $repo) {
-          issues(first: 5, states: OPEN, orderBy: {field: CREATED_AT, direction: DESC}, before: $cursor) {
-            totalCount
-            data: edges {
-              cursor
-              node {
-                id
-                title
-                url
-                state
-                author {
-                  login
-                }
-                labels(first: 5) {
-                  data: edges {
-                    node {
-                      id
-                      name
-                      color
-                    }
-                  }
-                }
-                comments {
-                  totalCount
-                }
-                milestone {
-                  title
-                }
-                participants(first: 3) {
-                  totalCount
-                  nodes {
-                    login
-                    avatarUrl
-                  }
-                }
-                createdAt
+query IssuesBeforeQuery($owner: String!, $repo: String!, $cursor: String) {
+  gitHub {
+    repositoryOwner(login: $owner) {
+      repository(name: $repo) {
+        issues(first: 5, states: OPEN, orderBy: {field: CREATED_AT, direction: DESC}, before: $cursor) {
+          totalCount
+          data: edges {
+            cursor
+            node {
+              id
+              title
+              url
+              state
+              author {
+                login
               }
+              labels(first: 5) {
+                data: edges {
+                  node {
+                    id
+                    name
+                    color
+                  }
+                }
+              }
+              comments {
+                totalCount
+              }
+              milestone {
+                title
+              }
+              participants(first: 3) {
+                totalCount
+                nodes {
+                  login
+                  avatarUrl
+                }
+              }
+              createdAt
             }
           }
         }
       }
     }
   }
-`;
+}`;
 
 class App extends Component {
   constructor(props) {

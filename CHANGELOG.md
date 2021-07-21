@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.2.0...v1.3.0) (2021-07-21)
+
+
+### Features
+
+* replace pull request metadata from github context ([#8](https://github.com/0-vortex/open-sauced-graphiql-explorer/issues/8)) ([dcb6210](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/dcb62107065f7d934fff031f979f762c8d6e9b36)), closes [#7](https://github.com/0-vortex/open-sauced-graphiql-explorer/issues/7)
+
 # [1.2.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.1.1...v1.2.0) (2021-07-21)
 
 

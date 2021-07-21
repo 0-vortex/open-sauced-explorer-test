@@ -1,11 +1,11 @@
-name: "NodeJS Development"
+name: "Development"
 
 on:
   pull_request:
 
 jobs:
   build:
-    name: Development
+    name: NodeJS Build
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository

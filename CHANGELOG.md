@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.0.0...v1.1.0) (2021-07-21)
+
+
+### Features
+
+* tarball the static assets for download ([c5a080c](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/c5a080c066ce8df6533cfb00d858b5a3eeb1a221))
+
 # 1.0.0 (2021-07-21)
 
 

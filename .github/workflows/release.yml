@@ -1,0 +1,45 @@
+name: "Release"
+
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 16
+
+      - name: Install npm@7
+        run: npm i -g npm@7
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static React app
+        run: npm run build
+
+      - name: Deploy to static branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          commit_message: ${{ github.event.head_commit.message }}
+          enable_jekyll: false
+          cname: open-sauced-graphiql-explorer-test.vortex.name
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release --dry-run

@@ -1,0 +1,29 @@
+name: "NodeJS Development"
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    name: Development
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node
+      uses: actions/setup-node@v2.1.5
+      with:
+        node-version: 16
+
+    - name: Install npm@7
+      run: npm i -g npm@7
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Audit production
+      run: npm audit --omit dev --omit optional
+
+    - name: Build static React app
+      run: npm run build

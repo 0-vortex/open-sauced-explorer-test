@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.1.1...v1.2.0) (2021-07-21)
+
+
+### Features
+
+* remove failing skip ci text on release ([#2](https://github.com/0-vortex/open-sauced-graphiql-explorer/issues/2)) ([055100e](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/055100e1e0e1e75edf3ac9a353d80005ab3bbb04)), closes [#1](https://github.com/0-vortex/open-sauced-graphiql-explorer/issues/1)
+
 ## [1.1.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.1.0...v1.1.1) (2021-07-21)
 
 

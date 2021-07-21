@@ -1,6 +1,6 @@
 {
   "name": "open-sauced-graphiql-explorer",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "private": true,
   "license": "BSD-3-Clause",
   "dependencies": {

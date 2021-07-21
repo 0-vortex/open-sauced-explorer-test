@@ -3,6 +3,9 @@
   "version": "1.1.0",
   "private": true,
   "license": "BSD-3-Clause",
+  "files": [
+    "build"
+  ],
   "dependencies": {
     "graphiql": "^1.4.2",
     "graphiql-explorer": "^0.6.3",

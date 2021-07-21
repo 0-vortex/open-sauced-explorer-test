@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.1.0...v1.1.1) (2021-07-21)
+
+
+### Bug Fixes
+
+* make proper static assets archive ([d437a60](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/d437a606ec32957954cffdd6b12a8a4786c01004))
+
 # [1.1.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.0.0...v1.1.0) (2021-07-21)
 
 

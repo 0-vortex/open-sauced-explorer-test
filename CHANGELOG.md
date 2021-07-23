@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.3.2...v1.4.0) (2021-07-23)
+
+
+### Bug Fixes
+
+* adjust rules for ci environment or npm module ([b819518](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/b819518770f6b623d879b1a788ab84eb5625410d))
+
 ### [1.3.2](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.3.1...v1.3.2) (2021-07-23)
 
 

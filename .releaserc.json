@@ -2,7 +2,8 @@
   "branches": ["main"],
   "plugins": [
     ["@semantic-release/commit-analyzer", {
-      "preset": "conventionalcommits"
+      "preset": "conventionalcommits",
+      "releaseRules": "./src/release-rules.js"
     }],
     ["@semantic-release/release-notes-generator", {
       "preset": "conventionalcommits"

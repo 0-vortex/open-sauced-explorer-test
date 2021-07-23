@@ -9,4 +9,4 @@ const releaseRules = [
   {type: "chore", release: false},
 ];
 
-export default releaseRules;
+module.exports = releaseRules;

@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY package.json ./
 COPY npm-shrinkwrap.json ./
+COPY .npmrc ./
 
 RUN npm ci
 

@@ -1,3 +1,10 @@
+### [1.3.2](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.3.1...v1.3.2) (2021-07-23)
+
+
+### Bug Fixes
+
+* add proper standard-version format ([1723bc0](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/1723bc0688a1445b35a246e65819212d0921535d))
+
 ## [1.3.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.3.0...v1.3.1) (2021-07-23)
 
 

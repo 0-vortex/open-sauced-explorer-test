@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.3.0...v1.3.1) (2021-07-23)
+
+
+### Performance Improvements
+
+* add release on patch ([4b29405](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/4b29405a82db1ccc8326c6d3d6f1dee9e53c26ff))
+
 # [1.3.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.2.0...v1.3.0) (2021-07-21)
 
 

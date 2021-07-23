@@ -2,34 +2,11 @@
   "branches": ["main"],
   "plugins": [
     ["@semantic-release/commit-analyzer", {
-      "preset": "angular",
-      "releaseRules": [
-        {
-          "type": "docs",
-          "release": "patch"
-        },
-        {
-          "type": "refactor",
-          "release": "patch"
-        },
-        {
-          "type": "style",
-          "release": "patch"
-        },
-        {
-          "type": "*",
-          "release": "patch"
-        },
-        {
-          "scope": "no-release",
-          "release": false
-        }
-      ],
-      "parserOpts": {
-        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
-      }
+      "preset": "conventionalcommits"
     }],
-    "@semantic-release/release-notes-generator",
+    ["@semantic-release/release-notes-generator", {
+      "preset": "conventionalcommits"
+    }],
     "@semantic-release/changelog",
     ["@semantic-release/npm", {
       "tarballDir": "pack"

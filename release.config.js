@@ -41,7 +41,7 @@ module.exports = {
           },
           {
             "url": "cloud.canister.io:5000",
-            "imageName": "CANISTER_IMAGE",
+            "imageName": `cloud.canister.io:5000/vortex/open-sauced-graphiql-explorer`,
             "user": "CANISTER_USER",
             "password": "CANISTER_PASSWORD"
           }

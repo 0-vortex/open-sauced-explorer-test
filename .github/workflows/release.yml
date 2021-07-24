@@ -103,11 +103,12 @@ jobs:
         run: |
           docker load --input /tmp/docker.tar
           docker image ls -a
+          echo "${{ GITHUB_REPOSITORY }}" | cut -d "/" -f 1
+          echo "REPO_NAME=${{ GITHUB_REPOSITORY }}" | cut -d "/" -f 1 >> $GITHUB_ENV
 
       - name: "🚀 release"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO_NAME: ${{ github.event.repo.name }}
           REPO_OWNER: ${{ github.repository_owner }}
           DOCKER_USER: ${{ secrets.DOCKER_USER }}
           DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}

@@ -4,6 +4,22 @@
 ### Features
 
 * add some workflow improvements ([#10](https://github.com/0-vortex/open-sauced-graphiql-explorer/issues/10)) ([27e2c62](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/27e2c62ac9ff23eda2fb3d389110dc69b1884047)), closes [#9](https://github.com/0-vortex/open-sauced-graphiql-explorer/issues/9)
+* correct variable expansion for github action ([a7e7e1e](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/a7e7e1e26afd1abab54bd64451d668eb7d623adc))
+* set dynamic repo name ([5b1ead6](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/5b1ead6e0a28c80d3d87ece7cafcfaf380880db0))
+
+
+### Bug Fixes
+
+* add proper checkout for docker build ([ee2aab2](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/ee2aab274a1bbe49237515791fc9d3328da9517c))
+* add propre repo owner variable name as ghcr login ([f7a27ec](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/f7a27ecf70f9e96e8d1295c68d08d384b9f77497))
+* cleanup environment variables ([75a07e7](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/75a07e734936a3246deb0c43be27f01b87da1891))
+
+## [1.5.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.4.0...v1.5.0) (2021-07-24)
+
+
+### Features
+
+* add some workflow improvements ([#10](https://github.com/0-vortex/open-sauced-graphiql-explorer/issues/10)) ([27e2c62](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/27e2c62ac9ff23eda2fb3d389110dc69b1884047)), closes [#9](https://github.com/0-vortex/open-sauced-graphiql-explorer/issues/9)
 
 
 ### Bug Fixes

@@ -41,8 +41,9 @@ module.exports = {
           },
           {
             "url": "cloud.canister.io:5000",
-            "imageName": `cloud.canister.io:5000/${process.env.CANISTER_USER}/${process.env.REPO_NAME}`,
-            "user": `deploy+${process.env.CANISTER_USER}`,
+            // "imageName": `cloud.canister.io:5000/${process.env.CANISTER_USER}/${process.env.REPO_NAME}`,
+            "imageName": "CANISTER_IMAGE",
+            "user": "CANISTER_USER",
             "password": "CANISTER_PASSWORD"
           }
         ]

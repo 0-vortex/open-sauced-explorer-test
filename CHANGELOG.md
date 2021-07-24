@@ -6,6 +6,14 @@
 * add canister free docker registry deploy ([09ec75a](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/09ec75a4c79b0ca7b77830f52a698f5c9aa16548))
 * try with full canister fqdn ([bac0b1f](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/bac0b1fb0432df14a30d0637b13e389167e37ddf))
 
+## [1.6.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.5.3...v1.6.0) (2021-07-24)
+
+
+### Features
+
+* add canister free docker registry deploy ([09ec75a](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/09ec75a4c79b0ca7b77830f52a698f5c9aa16548))
+* try with full canister fqdn ([bac0b1f](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/bac0b1fb0432df14a30d0637b13e389167e37ddf))
+
 ### [1.5.3](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.5.2...v1.5.3) (2021-07-24)
 
 

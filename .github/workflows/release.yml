@@ -18,6 +18,7 @@ jobs:
           context: .
           tags: docker:latest
           outputs: type=docker,dest=/tmp/docker.tar
+          push: false
 
       - name: "📂 docker artifacts"
         uses: actions/upload-artifact@v2
@@ -95,8 +96,14 @@ jobs:
           name: docker
           path: /tmp
 
+      - name: "📦 load tag"
+        run: |
+          docker load --input /tmp/docker.tar
+          docker image ls -a
+
       - name: "🚀 release"
         env:
+          REPO_NAME: ${{ github.event.repo.name }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DOCKER_REGISTRY_USER: ${{ secrets.DOCKER_REGISTRY_USER }}

@@ -1,3 +1,10 @@
+### [1.5.2](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.5.1...v1.5.2) (2021-07-24)
+
+
+### Bug Fixes
+
+* properly expand repo name variable ([31d55d2](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/31d55d2e9a7cece5ee1f1223873f86d0e4625d84))
+
 ### [1.5.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.5.0...v1.5.1) (2021-07-24)
 
 

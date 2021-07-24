@@ -103,8 +103,7 @@ jobs:
         run: |
           docker load --input /tmp/docker.tar
           docker image ls -a
-          echo "${{ github.repository }}" | cut -d "/" -f 1
-          echo "REPO_NAME=${{ github.repository }}" | cut -d "/" -f 1 >> $GITHUB_ENV
+          echo "REPO_NAME=$(echo "${{ github.repository }}" | cut -d "/" -f 2)" >> $GITHUB_ENV
 
       - name: "🚀 release"
         env:

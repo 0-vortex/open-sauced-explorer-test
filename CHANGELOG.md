@@ -1,3 +1,11 @@
+### [1.5.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.5.0...v1.5.1) (2021-07-24)
+
+
+### Bug Fixes
+
+* add proper new lines to exported release config ([4474862](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/4474862f215a05eeb84225f6764841e783f802c7))
+* release to docker hub by default ([1fb7068](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/1fb7068ab4a63a289a3f4574a4a247c9503b44e6))
+
 ## [1.5.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.4.0...v1.5.0) (2021-07-24)
 
 

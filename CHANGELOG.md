@@ -1,3 +1,10 @@
+### [1.6.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.6.0...v1.6.1) (2021-07-24)
+
+
+### Bug Fixes
+
+* remove canister.io ([16eada9](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/16eada9d613f062249768ada47cd1549b722d266))
+
 ## [1.6.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.5.3...v1.6.0) (2021-07-24)
 
 

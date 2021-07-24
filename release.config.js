@@ -38,6 +38,12 @@ module.exports = {
             "imageName": `ghcr.io/${process.env.REPO_OWNER}/${process.env.REPO_NAME}`,
             "user": "REPO_OWNER",
             "password": "GITHUB_TOKEN"
+          },
+          {
+            "url": "cloud.canister.io:5000",
+            "imageName": `${process.env.CANISTER_USER}/${process.env.REPO_NAME}`,
+            "user": `deploy+${process.env.CANISTER_USER}`,
+            "password": "CANISTER_PASSWORD"
           }
         ]
       }

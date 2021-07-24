@@ -37,12 +37,12 @@ module.exports = {
             "url": "docker.io",
             "imageName": `docker.io/${process.env.REPO_NAME}`,
             "user": "DOCKER_USER",
-            "password": "DOCKER_TOKEN"
+            "password": "DOCKER_PASSWORD"
           },
           {
             "url": "ghcr.io",
             "imageName": `ghcr.io/${process.env.REPO_OWNER}/${process.env.REPO_NAME}`,
-            "user": "GITHUB_USER",
+            "user": "REPO_OWNER",
             "password": "GITHUB_TOKEN"
           }
         ]

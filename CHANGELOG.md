@@ -1,3 +1,10 @@
+### [1.5.3](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.5.2...v1.5.3) (2021-07-24)
+
+
+### Bug Fixes
+
+* use proper namespace for docker build and push ([5173d21](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/5173d21e8e2004d6817e01cb231c66767ed70a53))
+
 ### [1.5.2](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.5.1...v1.5.2) (2021-07-24)
 
 

@@ -106,11 +106,11 @@ jobs:
 
       - name: "🚀 release"
         env:
-          REPO_NAME: ${{ github.event.repo.name }}
-          GITHUB_USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCKER_REGISTRY_USER: ${{ secrets.DOCKER_REGISTRY_USER }}
-          DOCKER_REGISTRY_TOKEN: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
+          REPO_NAME: ${{ github.event.repo.name }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
           GIT_AUTHOR_NAME: ${{ github.event.commits[0].author.username }}
           GIT_AUTHOR_EMAIL: ${{ github.event.commits[0].author.email }}
           GIT_COMMITTER_NAME: ${{ secrets.GIT_COMMITTER_NAME }}

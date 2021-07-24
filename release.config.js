@@ -18,7 +18,7 @@ module.exports = {
         "package.json",
         "npm-shrinkwrap.json"
       ],
-      "message": `chore(release): \${nextRelease.version}\\n\\n\${nextRelease.notes}`
+      "message": `chore(release): \${nextRelease.version}\n\n\${nextRelease.notes}`
     }],
     ["@semantic-release/github", {
       "assets": [

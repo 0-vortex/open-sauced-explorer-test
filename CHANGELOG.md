@@ -1,3 +1,10 @@
+### [2.0.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.0...v2.0.1) (2021-07-25)
+
+
+### Bug Fixes
+
+* remove extraneous docker environment variables ([f6a5c85](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/f6a5c857a49e7358ad02ed6305ceac52285cb9ac))
+
 ## [2.0.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.11.0...v2.0.0) (2021-07-25)
 
 

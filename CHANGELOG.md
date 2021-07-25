@@ -1,3 +1,10 @@
+### [2.0.4](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.3...v2.0.4) (2021-07-25)
+
+
+### Code Refactoring
+
+* trying out the build artifact path parameter ([79e3db6](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/79e3db65303c968393935b718291c3bf0712225e))
+
 ### [2.0.3](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.2...v2.0.3) (2021-07-25)
 
 

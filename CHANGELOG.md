@@ -1,3 +1,15 @@
+## [1.9.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.8.0...v1.9.0) (2021-07-25)
+
+
+### Features
+
+* add proper release url to environment link ([5005ac1](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/5005ac11b7f43ac1930b0786fec8b7c420962c1c))
+
+
+### Bug Fixes
+
+* remove docker temporary build from production environment ([0dbd999](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/0dbd999ad66d947e68dc5f2af901f8d75eb00c87))
+
 ## [1.8.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.7.0...v1.8.0) (2021-07-25)
 
 

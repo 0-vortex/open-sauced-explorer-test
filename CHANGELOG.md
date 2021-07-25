@@ -1,3 +1,10 @@
+### [1.10.3](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.10.2...v1.10.3) (2021-07-25)
+
+
+### Continuous Integration
+
+* add lint configuration to the production release ([3580f57](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/3580f5724691c3ae2864c5e57cc87ebb1eea0b98))
+
 ### [1.10.2](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.10.1...v1.10.2) (2021-07-25)
 
 

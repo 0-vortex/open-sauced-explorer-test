@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.11.0...v2.0.0) (2021-07-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* pr workflows are working now
+
+### Features
+
+* add breaking change and proper pull request lint ([9574de1](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/9574de11ae7f8d59303d7e6c46c3f4d79d0c6cf1))
+
 ## [1.11.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.10.3...v1.11.0) (2021-07-25)
 
 

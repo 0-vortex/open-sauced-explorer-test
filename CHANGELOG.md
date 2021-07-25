@@ -1,3 +1,10 @@
+### [2.0.6](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.5...v2.0.6) (2021-07-25)
+
+
+### Bug Fixes
+
+* checkout git repository to commit pages branch ([7476a6f](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/7476a6fc9cc9d38aaebadaad3055a775eecc49de))
+
 ### [2.0.5](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.4...v2.0.5) (2021-07-25)
 
 

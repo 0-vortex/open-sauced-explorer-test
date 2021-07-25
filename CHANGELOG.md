@@ -1,3 +1,10 @@
+## [1.11.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.10.3...v1.11.0) (2021-07-25)
+
+
+### Features
+
+* adjust release mechanism to fully mirror open-sauced practices ([4515356](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/4515356c49ca9d446a8898e428acfdf80605f251))
+
 ### [1.10.3](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.10.2...v1.10.3) (2021-07-25)
 
 

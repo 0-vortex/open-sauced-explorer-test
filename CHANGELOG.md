@@ -1,3 +1,10 @@
+### [2.0.2](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.1...v2.0.2) (2021-07-25)
+
+
+### Bug Fixes
+
+* correct static deploy path ([a23215c](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/a23215c2e029c95756e7085244cf16c89a075ac4))
+
 ### [2.0.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.0...v2.0.1) (2021-07-25)
 
 

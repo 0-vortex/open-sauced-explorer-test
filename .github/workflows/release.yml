@@ -67,7 +67,7 @@ jobs:
   release:
     environment:
       name: production
-      url: https://github.com/${{ github.repository }}/releases
+      url: https://github.com/${{ github.repository }}/releases/${{ steps.release.outputs.version }}
     name: Release
     needs:
       - docker
@@ -110,6 +110,7 @@ jobs:
           echo "REPO_NAME=$(echo "${{ github.repository }}" | cut -d "/" -f 2)" >> $GITHUB_ENV
 
       - name: "🚀 release"
+        id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: ${{ github.repository_owner }}
@@ -120,7 +121,9 @@ jobs:
           GIT_AUTHOR_EMAIL: ${{ github.event.commits[0].author.email }}
           GIT_COMMITTER_NAME: ${{ secrets.GIT_COMMITTER_NAME }}
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-        run: npx semantic-release
+        run: |
+          npx semantic-release
+          echo "::set-output version=$(cat package.json | jq -r '.version')"
 
   deploy:
     name: Deploy

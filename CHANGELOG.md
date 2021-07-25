@@ -1,3 +1,10 @@
+### [2.0.8](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.7...v2.0.8) (2021-07-25)
+
+
+### Bug Fixes
+
+* correct relative path for build ([c4bca8b](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/c4bca8b37ff3bab7955bffe9f32296f20d648541))
+
 ### [2.0.7](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.6...v2.0.7) (2021-07-25)
 
 

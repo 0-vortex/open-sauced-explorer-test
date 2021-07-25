@@ -7,6 +7,7 @@ on:
 
 jobs:
   docker:
+    name: Build container
     runs-on: ubuntu-latest
     steps:
       - name: "☁️ checkout repository"
@@ -30,6 +31,7 @@ jobs:
           path: /tmp/docker.tar
 
   build:
+    name: Build application
     runs-on: ubuntu-latest
     steps:
       - name: "☁️ checkout repository"
@@ -67,7 +69,7 @@ jobs:
     environment:
       name: production
       url: https://github.com/${{ github.repository }}/releases/tag/v${{ steps.release.outputs.version }}
-    name: Release
+    name: Semantic release
     needs:
       - docker
     runs-on: ubuntu-latest
@@ -125,7 +127,7 @@ jobs:
           echo "::set-output name=version::$(cat package.json | jq -r '.version')"
 
   deploy:
-    name: Deploy
+    name: Deploy to static
     needs:
       - build
       - release
@@ -146,7 +148,7 @@ jobs:
           cname: open-sauced-explorer-test.vortex.name
 
   cleanup:
-    name: Cleanup
+    name: Cleanup actions
     needs:
       - deploy
     runs-on: ubuntu-latest

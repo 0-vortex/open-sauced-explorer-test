@@ -1,3 +1,10 @@
+### [2.0.7](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.6...v2.0.7) (2021-07-25)
+
+
+### Bug Fixes
+
+* correct typo in output path ([a519140](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/a5191402ae7c514f4088dae097f0b08a2b5f93de))
+
 ### [2.0.6](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.5...v2.0.6) (2021-07-25)
 
 

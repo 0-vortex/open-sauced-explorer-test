@@ -1,3 +1,10 @@
+## [1.8.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.7.0...v1.8.0) (2021-07-25)
+
+
+### Features
+
+* remove hard coded docker tag names ([72b7b52](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/72b7b52657c7bd3f4e9fc13a3a743c29b00ff1df))
+
 ## [1.7.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.6.1...v1.7.0) (2021-07-25)
 
 

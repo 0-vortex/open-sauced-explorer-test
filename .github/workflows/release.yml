@@ -91,7 +91,7 @@ jobs:
       - name: "📦 install dependencies"
         run: npm ci
 
-      - name: "🚀 lint code"
+      - name: "🔍 lint code"
         run: npm run lint
 
   release:

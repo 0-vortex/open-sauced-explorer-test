@@ -20,7 +20,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          tags: ${{ secrets.DOCKER_USER }}/${{ secrets.DOCKER_IMAGE }}:latest
+          tags: ${{ github.repository }}:latest
           outputs: type=docker,dest=/tmp/docker.tar
           push: false
 
@@ -65,7 +65,9 @@ jobs:
           path: build
 
   release:
-    environment: production
+    environment:
+      name: production
+      url: https://github.com/${{ github.repository }}/releases
     name: Release
     needs:
       - docker
@@ -139,4 +141,4 @@ jobs:
           publish_dir: ./build
           commit_message: ${{ github.event.head_commit.message }}
           enable_jekyll: false
-          cname: open-sauced-graphiql-explorer-test.vortex.name
+          cname: open-sauced-explorer-test.vortex.name

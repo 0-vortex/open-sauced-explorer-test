@@ -31,7 +31,7 @@ module.exports = {
     [
       "@eclass/semantic-release-docker",
       {
-        "baseImageName": `${process.env.DOCKER_USER}/${process.env.DOCKER_IMAGE}`,
+        "baseImageName": `${process.env.GITHUB_REPOSITORY}`,
         "registries": [
           {
             "url": "ghcr.io",

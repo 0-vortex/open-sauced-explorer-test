@@ -1,3 +1,10 @@
+### [1.10.2](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.10.1...v1.10.2) (2021-07-25)
+
+
+### Styles
+
+* add proper release notes for all conventional releases ([caceda8](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/caceda884f4256a4f9b8b9c8111422b9f03a942f))
+
 ### [1.10.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.10.0...v1.10.1) (2021-07-25)
 
 ## [1.10.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.9.1...v1.10.0) (2021-07-25)

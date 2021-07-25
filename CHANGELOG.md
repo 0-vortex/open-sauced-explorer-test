@@ -1,3 +1,10 @@
+### [1.9.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.9.0...v1.9.1) (2021-07-25)
+
+
+### Bug Fixes
+
+* correct set output syntax for github workflow ([ffa8562](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/ffa856288c64d1c4489a3bff4972138a4305dea8))
+
 ## [1.9.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.8.0...v1.9.0) (2021-07-25)
 
 

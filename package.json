@@ -37,7 +37,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "push": "cz",
-    "format": "eslint . --fix --report-unused-disable-directives",
+    "lint": "eslint . --report-unused-disable-directives",
+    "format": "npm run lint -- --fix",
     "semantic-release": "semantic-release"
   },
   "browserslist": {

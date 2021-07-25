@@ -1,3 +1,10 @@
+### [2.0.3](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.2...v2.0.3) (2021-07-25)
+
+
+### Code Refactoring
+
+* debug build artifact ([8a8ce59](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/8a8ce5901fd1cbb699a311088b81150c09071276))
+
 ### [2.0.2](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.1...v2.0.2) (2021-07-25)
 
 

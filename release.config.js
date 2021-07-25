@@ -3,10 +3,28 @@ module.exports = {
   "plugins": [
     ["@semantic-release/commit-analyzer", {
       "preset": "conventionalcommits",
-      "releaseRules": "./src/release-rules.js"
+      "releaseRules": [
+        {type: "build", release: "minor"},
+        {type: "ci", release: "patch"},
+        {type: "docs", release: "minor"},
+        {type: "style", release: "patch"},
+        {type: "refactor", release: "patch"},
+        {type: "test", release: "patch"},
+        {type: "revert", release: "patch"},
+        {type: "chore", release: false}
+      ],
+      "parserOpts": {
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+      }
     }],
     ["@semantic-release/release-notes-generator", {
       "preset": "conventionalcommits",
+      "parserOpts": {
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+      },
+      "writerOpts": {
+        "commitsSort": ["subject", "scope"]
+      },
       "presetConfig": {
         types: [
           {type: 'feat', section: 'Features'},

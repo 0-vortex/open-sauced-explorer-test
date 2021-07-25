@@ -159,19 +159,27 @@ jobs:
       - release
     runs-on: ubuntu-latest
     steps:
+      - name: "☁️ checkout repository"
+        uses: actions/checkout@v2
+
       - name: "📂 download artifacts"
         uses: actions/download-artifact@v2
         with:
           name: build
           path: /home/runner/build
 
-      - run: ls -lahH /home/runner/build
+      - name: "📂 copy artifacts"
+        run: |
+          mkdir -p build
+          ls -lahH /home/runner/build
+          cp -R /home/runnen/build ./build
+          ls -lahH ./build
 
       - name: "🚀 deploy static"
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: /home/runner/build
+          publish_dir: ./build
           commit_message: ${{ github.event.head_commit.message }}
           enable_jekyll: false
           cname: open-sauced-explorer-test.vortex.name

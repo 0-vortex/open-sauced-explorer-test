@@ -1,3 +1,10 @@
+## [1.10.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.9.1...v1.10.0) (2021-07-25)
+
+
+### Features
+
+* add workflow job to clean uploaded build artifacts ([7eebb19](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/7eebb19f052af27a6f259f686b8e824b04c38991))
+
 ### [1.9.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.9.0...v1.9.1) (2021-07-25)
 
 

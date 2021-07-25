@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.6.1...v1.7.0) (2021-07-25)
+
+
+### Features
+
+* add github environment display ([abc6c09](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/abc6c09fdd2fc69f7fd995e9032b43c6d2612b89))
+
 ### [1.6.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v1.6.0...v1.6.1) (2021-07-24)
 
 

@@ -7,7 +7,6 @@ on:
 
 jobs:
   docker:
-    environment: production
     runs-on: ubuntu-latest
     steps:
       - name: "☁️ checkout repository"

@@ -64,6 +64,7 @@ jobs:
           path: build
 
   release:
+    environment: production
     name: Release
     needs:
       - docker

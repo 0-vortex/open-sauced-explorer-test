@@ -172,7 +172,7 @@ jobs:
         run: |
           mkdir -p build
           ls -lahH /home/runner/build
-          cp -R /home/runnen/build ./build
+          cp -R /home/runner/build ./build
           ls -lahH ./build
 
       - name: "🚀 deploy static"

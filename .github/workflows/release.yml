@@ -170,9 +170,7 @@ jobs:
 
       - name: "📂 copy artifacts"
         run: |
-          mkdir -p build
-          ls -lahH /home/runner/build
-          cp -R /home/runner/build ./build
+          cp -R /home/runner/build .
           ls -lahH ./build
 
       - name: "🚀 deploy static"

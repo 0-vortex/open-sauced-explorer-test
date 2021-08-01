@@ -155,10 +155,8 @@ jobs:
           GIT_COMMITTER_NAME: ${{ secrets.GIT_COMMITTER_NAME }}
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
         run: |
-          ls -lahH /tmp/
-          pwd
           ls -lahH /tmp/build
-          npx semantic-release --dry-run
+          npx semantic-release
           echo "::set-output name=version::$(cat package.json | jq -r '.version')"
 
   deploy:

@@ -1,3 +1,10 @@
+### [2.1.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.1.0...v2.1.1) (2021-08-01)
+
+
+### Bug Fixes
+
+* add proper static distribution ([90d47aa](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/90d47aadf86437ce884d38211e5f889a3362a79e))
+
 ## [2.1.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.8...v2.1.0) (2021-08-01)
 
 

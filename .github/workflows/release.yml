@@ -128,7 +128,7 @@ jobs:
       - name: "📦 install dependencies"
         run: npm ci
 
-      - name: "📂 download artifacts"
+      - name: "📂 download docker artifacts"
         uses: actions/download-artifact@v2
         with:
           name: docker
@@ -138,6 +138,12 @@ jobs:
         run: |
           docker load --input /tmp/docker.tar
           docker image ls -a
+
+      - name: "📂 download build artifacts"
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: /tmp
 
       - name: "🚀 release"
         id: release
@@ -149,7 +155,10 @@ jobs:
           GIT_COMMITTER_NAME: ${{ secrets.GIT_COMMITTER_NAME }}
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
         run: |
-          npx semantic-release
+          pwd
+          ls -lahH /tmp/
+          ls -lahH /tmp/build
+          npx semantic-release --dry-run
           echo "::set-output name=version::$(cat package.json | jq -r '.version')"
 
   deploy:

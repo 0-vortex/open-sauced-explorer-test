@@ -143,7 +143,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build
-          path: /tmp
+          path: /tmp/build
 
       - name: "🚀 release"
         id: release
@@ -155,8 +155,8 @@ jobs:
           GIT_COMMITTER_NAME: ${{ secrets.GIT_COMMITTER_NAME }}
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
         run: |
-          pwd
           ls -lahH /tmp/
+          pwd
           ls -lahH /tmp/build
           npx semantic-release --dry-run
           echo "::set-output name=version::$(cat package.json | jq -r '.version')"

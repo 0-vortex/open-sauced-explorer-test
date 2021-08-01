@@ -1,3 +1,20 @@
+## [2.1.0](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.8...v2.1.0) (2021-08-01)
+
+
+### Bug Fixes
+
+* start releasing with static assets again ([fc35dea](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/fc35dea69dbf1d53baac5fb155ae7e7b4a2b3eba))
+
+
+### Continuous Integration
+
+* test proper static build artifacts ([2fc32e7](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/2fc32e7307d50d8e385bb8491f9e6b2e1448220e))
+
+
+### Build System
+
+* now it should work ([4248f69](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/4248f69cc0c45bafeda544babdc8537323e23813))
+
 ### [2.0.8](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.0.7...v2.0.8) (2021-07-25)
 
 

@@ -64,7 +64,7 @@ module.exports = {
     [
       "@semantic-release-plus/docker",
       {
-        "name": `ghcr.io/${process.env.GITHUB_REPOSITORY}`,
+        "name": process.env.GITHUB_REPOSITORY,
         "registry": "ghcr.io",
       }
     ]

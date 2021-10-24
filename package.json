@@ -2,7 +2,7 @@
   "name": "open-sauced-graphiql-explorer",
   "version": "2.1.1",
   "private": true,
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "files": [
     "build"
   ],
@@ -10,36 +10,34 @@
     "graphiql": "^1.4.2",
     "graphiql-explorer": "^0.6.3",
     "graphql": "^15.5.0",
-    "onegraph-auth": "^3.3.2",
+    "onegraph-auth": "^4.0.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-responsive": "^8.2.0",
     "use-persisted-state": "^0.3.3"
   },
   "devDependencies": {
-    "@eclass/semantic-release-docker": "^1.0.7",
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.0",
     "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.0",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "commitizen": "^4.2.4",
-    "conventional-changelog-conventionalcommits": "^4.6.0",
     "cz-conventional-changelog": "^3.3.0",
+    "open-sauced-semantic-config-test": "^2.1.0-alpha.2",
     "react-scripts": "4.0.3",
-    "semantic-release": "^17.4.4",
-    "typescript": "^4.3.5",
-    "web-vitals": "^1.0.1"
+    "semantic-release": "^18.0.0",
+    "typescript": "^4.4.4",
+    "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "push": "cz",
-    "lint": "eslint . --report-unused-disable-directives",
+    "react-scripts": "npx react-scripts",
+    "start": "npm run react-scripts -- start",
+    "build": "npm run react-scripts -- build",
+    "test": "npm run react-scripts -- test",
+    "eject": "npm run react-scripts -- eject",
+    "push": "npx cz",
+    "lint": "npx eslint . --report-unused-disable-directives",
     "format": "npm run lint -- --fix",
-    "semantic-release": "semantic-release"
+    "semantic-release": "npx semantic-release"
   },
   "browserslist": {
     "production": [

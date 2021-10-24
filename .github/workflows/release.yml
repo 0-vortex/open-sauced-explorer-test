@@ -96,9 +96,7 @@ jobs:
 
   release:
     outputs:
-      version:
-        description: "The generated version"
-        value: ${{ steps.release.outputs.version }}
+      version: ${{ steps.release.outputs.version }}
     environment:
       name: production
       url: https://github.com/${{ github.repository }}/releases/tag/v${{ steps.release.outputs.version }}
@@ -203,7 +201,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          destination_dir: ${{ steps.release.outputs.version }}
+          destination_dir: ${{ needs.release.outputs.version }}
           commit_message: ${{ github.event.head_commit.message }}
           enable_jekyll: false
 

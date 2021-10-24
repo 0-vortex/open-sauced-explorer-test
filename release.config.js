@@ -62,17 +62,10 @@ module.exports = {
       ]
     }],
     [
-      "@eclass/semantic-release-docker",
+      "@semantic-release-plus/docker",
       {
-        "baseImageName": `${process.env.GITHUB_REPOSITORY}`,
-        "registries": [
-          {
-            "url": "ghcr.io",
-            "imageName": `ghcr.io/${process.env.GITHUB_REPOSITORY}`,
-            "user": "REPO_OWNER",
-            "password": "GITHUB_TOKEN"
-          }
-        ]
+        "name": `ghcr.io/${process.env.GITHUB_REPOSITORY}`,
+        "registry": "ghcr.io",
       }
     ]
   ]

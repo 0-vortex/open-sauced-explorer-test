@@ -1,3 +1,10 @@
+### [2.1.3](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.1.2...v2.1.3) (2021-10-24)
+
+
+### Bug Fixes
+
+* add better docker configuration ([414ac78](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/414ac78af40b2818c75749527d2d06e167bae3fd))
+
 ### [2.1.2](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.1.1...v2.1.2) (2021-10-24)
 
 

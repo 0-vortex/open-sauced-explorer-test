@@ -1,3 +1,20 @@
+### [2.1.2](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.1.1...v2.1.2) (2021-10-24)
+
+
+### Bug Fixes
+
+* correct workflow syntax for release ([12d60e8](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/12d60e8ddecf3b235fc5fc45a7b91196e5219965))
+
+
+### Code Refactoring
+
+* test out conditional staging docs ([e82a906](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/e82a90609f6d33ce980e9dc0a5c4fac21e89b988))
+
+
+### Tests
+
+* implement different docker release mechanism ([1aa21ab](https://github.com/0-vortex/open-sauced-graphiql-explorer/commit/1aa21ab375106822a5c720270082c990f84dc10e))
+
 ### [2.1.1](https://github.com/0-vortex/open-sauced-graphiql-explorer/compare/v2.1.0...v2.1.1) (2021-08-01)
 
 
